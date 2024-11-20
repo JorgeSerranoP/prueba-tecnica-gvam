@@ -1,0 +1,7 @@
+<div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="stopPropagation($event)">
+        <h2>¡Bienvenido!</h2>
+        <p>Este es un modal personalizado. Puedes cerrarlo con el botón de abajo o haciendo clic fuera del modal.</p>
+        <button (click)="closeModal()">Cerrar Modal</button>
+    </div>
+</div>

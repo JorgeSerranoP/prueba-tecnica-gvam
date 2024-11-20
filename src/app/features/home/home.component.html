@@ -1,8 +1,9 @@
 <app-header *ngIf="!fullscreenService.getIsFullscreen()"></app-header>
 <app-carousel [images]="['/assets/images/imagen-1.jpg', '/assets/images/imagen-2.jpg', '/assets/images/imagen-3.jpg']"></app-carousel>
+<app-modal *ngIf="isModalOpen" (close)="closeModal()"></app-modal>
 <div class="button-container" *ngIf="!fullscreenService.getIsFullscreen()">
 	<app-button 
-		(btnClick)="false"
+		(btnClick)="openModal()"
 		icon="icon-location">
 	</app-button>
 
