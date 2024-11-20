@@ -1,0 +1,8 @@
+<button class="button" (click)="btnClick.emit()" [disabled]="disabled">
+  <div class="icon" *ngIf="icon">
+		<div [class]="icon"></div>
+	</div>
+	<div class="text" *ngIf="!icon">
+		{{text}}
+	</div>
+</button>

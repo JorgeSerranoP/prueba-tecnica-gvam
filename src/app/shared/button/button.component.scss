@@ -1,0 +1,21 @@
+.button {
+    background-color: rgb(255,205,3);
+    border: none;
+    border-radius: 0;
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}
+
