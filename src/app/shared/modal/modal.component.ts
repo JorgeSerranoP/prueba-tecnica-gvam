@@ -7,14 +7,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent {
-  @Output() close = new EventEmitter<void>(); // Evento para cerrar el modal desde fuera
+  @Output() close = new EventEmitter<void>();
 
-  // Método para cerrar el modal
   closeModal(): void {
-    this.close.emit(); // Emitimos el evento para cerrar el modal
+    this.close.emit();
   }
 
-  // Evitar la propagación del evento click para que no cierre el modal al hacer clic dentro de él
   stopPropagation(event: MouseEvent): void {
     event.stopPropagation();
   }

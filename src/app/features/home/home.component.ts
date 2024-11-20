@@ -12,15 +12,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  isModalOpen = false; // Controla si el modal está abierto o cerrado
+  isModalOpen = false;
 
-  // Método para abrir el modal
   openModal(): void {
-    console.log('clicke')
     this.isModalOpen = true;
   }
 
-  // Método para cerrar el modal
   closeModal(): void {
     this.isModalOpen = false;
   }
