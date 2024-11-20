@@ -1,6 +1,6 @@
-<app-header></app-header>
+<app-header *ngIf="!fullscreenService.getIsFullscreen()"></app-header>
 <app-carousel [images]="['/assets/images/imagen-1.jpg', '/assets/images/imagen-2.jpg', '/assets/images/imagen-3.jpg']"></app-carousel>
-<div class="button-container">
+<div class="button-container" *ngIf="!fullscreenService.getIsFullscreen()">
 	<app-button 
 		(btnClick)="false"
 		icon="icon-location">
@@ -13,7 +13,7 @@
 		</app-button>
 	</div>
 </div>
-<div class="text-container">
+<div class="text-container" *ngIf="!fullscreenService.getIsFullscreen()">
 	<h2>¿Qué vas a encontrar en este Museo?</h2>
 	<p>¡Estás a punto de emprender un viaje por la historia postal y telegráfica de España! En este museo no solo vas a ver
 	piezas fascinantes para los amantes de la filatelia, como el primer sello emitido en nuestro país.

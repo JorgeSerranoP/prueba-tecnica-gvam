@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { FullscreenService } from '../../core/fullscreen.service';
 
 @Component({
   selector: 'app-carousel',
@@ -12,6 +13,9 @@ export class CarouselComponent implements OnInit {
   currentIndex: number = 0;
   currentTranslate: number = 0; 
   autoSlideInterval: any; 
+
+  constructor(public fullscreenService: FullscreenService) { }
+
 
   ngOnInit(): void {
     this.startAutoSlide();
@@ -54,4 +58,23 @@ export class CarouselComponent implements OnInit {
   ngOnDestroy(): void {
     clearInterval(this.autoSlideInterval); 
   }
+
+  toggleFullScreen(): void {
+    const elem = document.documentElement;
+
+    if (!document.fullscreenElement) {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+        this.fullscreenService.setIsFullscreen(true)
+        document.querySelector('.carousel')?.classList.add('fullscreen-mode');
+      } 
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+        this.fullscreenService.setIsFullscreen(false)
+        document.querySelector('.carousel')?.classList.remove('fullscreen-mode');
+      } 
+    }
+  }
+
 }

@@ -1,4 +1,8 @@
 <div class="carousel">
+		<button class="fullscreen" (click)="toggleFullScreen()">
+			<div [class]="!fullscreenService.getIsFullscreen() ? 'icon-fullscreen' : 'icon-no-fullscreen'"></div>
+		</button>
+
     <div class="carousel-inner" [style.transform]="'translateX(' + currentTranslate + '%)'">
         <div *ngFor="let image of images; let i = index" class="carousel-item" [class.active]="i === currentIndex">
             <img [src]="image" alt="Imagen {{ i + 1 }}" />
