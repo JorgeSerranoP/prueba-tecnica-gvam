@@ -1,59 +1,47 @@
-# PruebaTecnicaGvam
+# Prueba Técnica: Desarrollador de Aplicaciones Híbridas - GVAM
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
+## Descripción del Proyecto
 
-## Development server
+Este proyecto es la prueba técnica para optar al puesto de **Desarrollador de Aplicaciones Híbridas** en la empresa **GVAM**. El objetivo principal de la prueba es demostrar los conocimientos del candidato en el desarrollo de aplicaciones web utilizando tecnologías modernas como **Angular**, **HTML**, **CSS** y **Typescript**.
 
-To start a local development server, run:
+El proyecto incluye varias funcionalidades interactivas, como un **carrusel de imágenes** y un **modal**, ofreciendo una experiencia de usuario fluida y atractiva.
 
-```bash
-ng serve
-```
+## Funcionalidades Implementadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Carrusel Interactivo**: Un carrusel de imágenes que permite navegar entre ellas mediante botones y indicadores.
+- **Modal Interactivo**: Un modal que se puede abrir y cerrar, mostrando contenido adicional al usuario.
+- **Pantalla Completa (Parcial)**: Se implementó la funcionalidad de pantalla completa para el carrusel, aunque hay algunas áreas que se pueden mejorar para asegurar un comportamiento óptimo en todos los dispositivos.
 
-## Code scaffolding
+## Instrucciones para Ejecutar la Aplicación
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Para ejecutar la aplicación localmente, sigue estos pasos:
 
-```bash
-ng generate component component-name
-```
+1. **Clona o descarga el repositorio** desde GitHub.
+2. **Instala las dependencias** utilizando el siguiente comando:
+   
+    ```bash
+    npm install
+    ```
+4. **Levanta la aplicación** con el siguiente comando:
+   
+    ```bash
+    ng serve -o
+    ```
+    Esto iniciará el servidor de desarrollo y abrirá la aplicación en tu navegador predeterminado.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Tecnologías Utilizadas
 
-```bash
-ng generate --help
-```
+- **Angular** (última versión)
+- **HTML5** y **CSS3**
+- **TypeScript**
+- **JavaScript**
 
-## Building
+## Detalles Adicionales
 
-To build the project run:
+- **Interactividad**: Las funcionalidades del carrusel y el modal están completamente interactivas y responden a las acciones del usuario, mejorando la experiencia.
+- **Optimización**: Se ha priorizado la funcionalidad y la accesibilidad, asegurando un buen rendimiento en la mayoría de los dispositivos.
 
-```bash
-ng build
-```
+## Mejoras Futuras
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Pantalla Completa**: Se puede seguir trabajando en la funcionalidad de pantalla completa para asegurar una experiencia consistente en todos los tamaños de pantalla.
+- **Refinamiento del Carrusel**: Se podrían agregar características adicionales, como la navegación automática de las imágenes o la capacidad de arrastrar para cambiar de imagen.
