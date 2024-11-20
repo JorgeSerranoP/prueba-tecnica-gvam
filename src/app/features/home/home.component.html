@@ -7,15 +7,15 @@
 	</app-button>
 
 	<div class="buttons-text-control">
-		<app-button (btnClick)="false" text="A-">
+		<app-button (btnClick)="decreaseText()" text="A-" [disabled]="textSizeService.getFontSize() == textSizeService.minSize">
 		</app-button>
-		<app-button (btnClick)="false" text="A+">
+		<app-button (btnClick)="increaseText()" text="A+" [disabled]="textSizeService.getFontSize() == textSizeService.maxSize">
 		</app-button>
 	</div>
 </div>
 <div class="text-container" *ngIf="!fullscreenService.getIsFullscreen()">
 	<h2>¿Qué vas a encontrar en este Museo?</h2>
-	<p>¡Estás a punto de emprender un viaje por la historia postal y telegráfica de España! En este museo no solo vas a ver
+	<p [ngStyle]="{'font-size.px': textSizeService.getFontSize()}">¡Estás a punto de emprender un viaje por la historia postal y telegráfica de España! En este museo no solo vas a ver
 	piezas fascinantes para los amantes de la filatelia, como el primer sello emitido en nuestro país.
 	<br><br>
 	También descubrirás las aportaciones españolas que han contribuido al desarrollo tecnológico de la telegrafía; objetos
