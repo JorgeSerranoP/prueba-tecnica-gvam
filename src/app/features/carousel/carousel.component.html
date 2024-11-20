@@ -1,1 +1,14 @@
-<p>carousel works!</p>
+<div class="carousel">
+    <div class="carousel-inner" [style.transform]="'translateX(' + currentTranslate + '%)'">
+        <div *ngFor="let image of images; let i = index" class="carousel-item" [class.active]="i === currentIndex">
+            <img [src]="image" alt="Imagen {{ i + 1 }}" />
+        </div>
+    </div>
+
+    <button class="control prev" (click)="prev()">&#10094;</button>
+    <button class="control next" (click)="next()">&#10095;</button>
+
+    <div class="indicators">
+        <span *ngFor="let image of images; let i = index" [class.active]="i === currentIndex" (click)="goTo(i)"></span>
+    </div>
+</div>
