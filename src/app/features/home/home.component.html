@@ -1,8 +1,9 @@
 <app-header></app-header>
 <app-carousel></app-carousel>
+<app-modal *ngIf="isModalOpen" (close)="closeModal()"></app-modal>
 <div class="button-container">
 	<app-button 
-		(btnClick)="false"
+		(btnClick)="openModal()"
 		icon="icon-location">
 	</app-button>
 
