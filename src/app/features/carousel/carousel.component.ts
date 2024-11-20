@@ -16,7 +16,6 @@ export class CarouselComponent implements OnInit {
 
   constructor(public fullscreenService: FullscreenService) { }
 
-
   ngOnInit(): void {
     this.startAutoSlide();
   }
@@ -41,7 +40,10 @@ export class CarouselComponent implements OnInit {
   }
 
   updateTranslate(): void {
-    this.currentTranslate = -this.currentIndex * 106.85; 
+    if(!this.fullscreenService.getIsFullscreen())
+      this.currentTranslate = -this.currentIndex * 106.85; 
+    else
+      this.currentTranslate = -this.currentIndex * 100;
   }
 
   startAutoSlide(): void {
